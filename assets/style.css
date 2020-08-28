@@ -1,17 +1,39 @@
-body { 
-  min-height: 100vh; 
-  display: flex; 
-  flex-direction: column 
+:root {
+  --hue-mn-apricot: hsl(8.57, 81.82%, 69.8%);
+  --hue-mn-apricot-darker: hsl(8.57, 81.82%, 59.8%);
+  --hue-mn-apricot-lighter: hsl(8.57, 81.82%, 79.8%);
+
+  --hue-tw-frolic: hsl(338.74, 81.94%, 69.61%);
+  --hue-tw-frolic-darker: hsl(338.74, 81.94%, 59.61%);
+  --hue-tw-frolic-lighter: hsl(338.74, 81.94%, 79.61%);
+
+  --hue-aft-golden-wheat: hsl(40, 81.94%, 59.61%);
+
+  --hue-snow-grey: hsla(218, 19%, 89%, 1);
+  --hue-snow: hsla(218, 19%, 98%, 1);
+  --hue-winter-grey: hsla(218, 19%, 59%, 1);
+  --halfway-see-through-snow-grey: hsla(218, 19%, 89%, 0.75);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--hue-snow-grey);
 }
 
 header {
-  min-height: 8vh
-} 
+  min-height: 10vh;
+  background-color: var(--hue-mn-apricot);
+  color: var(--hue-aft-golden-wheat);
+}
 
-main{f
-  lex-grow: 1
-} 
+main {
+  flex-grow: 1;
+}
 
-footer{ 
-  min-height: 8vh
+footer {
+  min-height: 10vh;
+  background-color: var(--hue-mn-apricot);
+  color: var(--hue-aft-golden-sand);
 }
