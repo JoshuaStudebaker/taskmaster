@@ -3,7 +3,12 @@ import store from "../store.js";
 
 //TODO Don't forget to render to the screen after every data change.
 function _drawLists() {
+  debugger;
   store.saveState();
+  let template = "";
+  store.State.lists.forEach((t) => (template += t.Template));
+
+  document.getElementById("list").innerHTML = template;
 }
 
 //Public

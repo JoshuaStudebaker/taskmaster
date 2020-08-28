@@ -3,11 +3,11 @@ import List from "./Models/List.js";
 let _state = {
   /** @type {List[]} */
   lists: [
-    // @ts-ignore
     new List({
       name: "Example",
       color: "sea-green",
       tasks: ["first task", "second task"],
+      id: 238471,
     }),
   ],
 };
@@ -23,7 +23,6 @@ function _loadState() {
   }
 }
 _loadState();
-
 class Store {
   /**
    * Provides access to application state data

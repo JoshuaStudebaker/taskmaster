@@ -55,5 +55,5 @@ footer {
 }
 
 .sea-green {
-  color: var(--hue-note-seagreen);
+  background-color: var(--hue-note-seagreen);
 }
