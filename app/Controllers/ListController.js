@@ -17,6 +17,10 @@ export default class ListController {
   addTask() {
     event.preventDefault();
     let form = event.target;
-    console.log("check");
+    let newList = {
+      name: form.name.value || "List Name",
+      color: form.color.value || "sea-green",
+    };
+    ListService.addList(newList);
   }
 }

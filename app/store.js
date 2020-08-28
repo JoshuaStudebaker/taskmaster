@@ -2,7 +2,14 @@ import List from "./Models/List.js";
 
 let _state = {
   /** @type {List[]} */
-  lists: [],
+  lists: [
+    // @ts-ignore
+    new List({
+      name: "Example",
+      color: "sea-green",
+      tasks: ["first task", "second task"],
+    }),
+  ],
 };
 
 //NOTE You should not need to change the code from this point down
