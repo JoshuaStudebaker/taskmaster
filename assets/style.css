@@ -9,6 +9,10 @@
 
   --hue-aft-golden-wheat: hsl(40, 81.94%, 59.61%);
 
+  --hue-note-seagreen: hsl(148.28, 93.55%, 71.76%);
+  --hue-note-lila: hsl(268.46, 92.86%, 67.06%);
+  --hue-note-swan-blue: hsl(177.93, 93.55%, 71.76%);
+
   --hue-snow-grey: hsla(218, 19%, 89%, 1);
   --hue-snow: hsla(218, 19%, 98%, 1);
   --hue-winter-grey: hsla(218, 19%, 59%, 1);
@@ -36,4 +40,24 @@ footer {
   min-height: 10vh;
   background-color: var(--hue-mn-apricot);
   color: var(--hue-aft-golden-sand);
+}
+
+i {
+  color: var(--hue-aft-golden-wheat);
+}
+
+.swan-blue {
+  color: var(--hue-note-swan-blue);
+}
+
+.frolic-pink {
+  color: var(--hue-tw-frolic-darker);
+}
+
+.lila-purple {
+  color: var(--hue-note-lila);
+}
+
+.sea-green {
+  color: var(--hue-note-seagreen);
 }

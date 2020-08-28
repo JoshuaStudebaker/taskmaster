@@ -14,4 +14,9 @@ export default class ListController {
   }
 
   //TODO: Your app will need the ability to create, and delete both lists and listItems
+  addTask() {
+    event.preventDefault();
+    let form = event.target;
+    console.log("check");
+  }
 }
