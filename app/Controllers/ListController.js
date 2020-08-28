@@ -1,7 +1,10 @@
 import ListService from "../Services/ListService.js";
+import store from "../store.js";
 
 //TODO Don't forget to render to the screen after every data change.
-function _drawLists() {}
+function _drawLists() {
+  store.saveState();
+}
 
 //Public
 export default class ListController {
