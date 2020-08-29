@@ -4,13 +4,16 @@ import store from "../store.js";
 //Public
 class ListService {
   removeTask(id, taskName) {
-    throw new Error("Method not implemented.");
+    let list = store.State.lists.find((list) => list.id == id);
+    let taskIndex = list.tasks.findIndex((t) => t == taskName);
+    list.tasks.splice(taskIndex, 1);
   }
-  addTask(id) {
-    throw new Error("Method not implemented.");
+  addTask(id, newTask) {
+    let seeker = store.State.tasks.find((list) => list.id == id);
+    seeker.tasks.push(newTask);
   }
   removeList(id) {
-    throw new Error("Method not implemented.");
+    store.State.lists = store.State.lists.filter((list) => list.id != id);
   }
   addList(newList) {
     let newListAdded = new List(newList);

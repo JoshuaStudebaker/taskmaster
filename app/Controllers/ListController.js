@@ -35,7 +35,7 @@ export default class ListController {
   }
 
   addTask(id) {
-    ListService.addTask(id);
+    ListService.addTask(id, newTask);
     _drawLists();
   }
 
