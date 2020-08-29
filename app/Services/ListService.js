@@ -3,6 +3,15 @@ import store from "../store.js";
 
 //Public
 class ListService {
+  removeTask(id, taskName) {
+    throw new Error("Method not implemented.");
+  }
+  addTask(id) {
+    throw new Error("Method not implemented.");
+  }
+  removeList(id) {
+    throw new Error("Method not implemented.");
+  }
   addList(newList) {
     let newListAdded = new List(newList);
     store.State.lists.push(newListAdded);

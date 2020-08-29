@@ -6,7 +6,7 @@ function _drawLists() {
   debugger;
   store.saveState();
   let template = "";
-  store.State.lists.forEach((t) => (template += t.Template));
+  store.State.lists.forEach((list) => (template += list.Template));
 
   document.getElementById("list").innerHTML = template;
 }
@@ -19,7 +19,7 @@ export default class ListController {
   }
 
   //TODO: Your app will need the ability to create, and delete both lists and listItems
-  addTask() {
+  addList() {
     event.preventDefault();
     let form = event.target;
     let newList = {
@@ -27,5 +27,20 @@ export default class ListController {
       color: form.color.value || "sea-green",
     };
     ListService.addList(newList);
+  }
+
+  removeList(id) {
+    ListService.removeList(id);
+    _drawLists();
+  }
+
+  addTask(id) {
+    ListService.addTask(id);
+    _drawLists();
+  }
+
+  removeTask(id, taskName) {
+    ListService.removeTask(id, taskName);
+    _drawLists();
   }
 }
