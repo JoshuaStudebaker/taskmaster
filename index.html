@@ -2,17 +2,89 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/style.css" />
     <title>TaskMaster</title>
   </head>
 
   <body>
+    <header class="container-fluid shadow text-center">
+      <div class="row">
+        <div class="col-3">
+          <h1><i class="fas fa-sticky-note"></i> Task Master</h1>
+        </div>
+        <div class="col-9">
+          <form class="py-2" onsubmit="app.listController.addList()">
+            <div class="form-row justify-content-end">
+              <div class="form-group col-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter List Name.."
+                />
+              </div>
+            </div>
+            <div class="form-row justify-content-around form-inline">
+              <div class="form-group col-3">
+                <select name="color">
+                  <option selected>Choose colors...</option>
+                  <option value="sea-green" class="sea-green">See Green</option>
+                  <option value="swan-blue" class="swan-blue">Swan Blue</option>
+                  <option value="lila-purple" class="lila-purple">
+                    Lila Purple
+                  </option>
+                  <option value="rosy-pink" class="rosy-pink">Rosy Pink</option>
+                </select>
+
+                <button type="submit" class="btn btn-primary">Create</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="container-fluid">
+      <div class="row" id="list"></div>
+    </main>
+    <footer class="container-fluid shadow text-center">
+      <h3>
+        <i class="fas fa-hat-cowboy-side"></i> Crafted by StudeWorks
+        <i class="fas fa-hat-cowboy-side"></i>
+      </h3>
+    </footer>
+
+    <!--#region Scripts -->
     <script src="app/main.js" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/4dd4faf761.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <!--#endregion -->
   </body>
 </html>

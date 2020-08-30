@@ -1,0 +1,101 @@
+:root {
+  --hue-mn-apricot: hsl(8.57, 81.82%, 69.8%);
+  --hue-mn-apricot-darker: hsl(8.57, 81.82%, 59.8%);
+  --hue-mn-apricot-lighter: hsl(8.57, 81.82%, 79.8%);
+
+  --hue-tw-frolic: hsl(338.74, 81.94%, 69.61%);
+  --hue-tw-rosy-pink: hsl(338.74, 81.94%, 59.61%);
+  --hue-tw-frolic-lighter: hsl(338.74, 81.94%, 79.61%);
+
+  --hue-aft-golden-wheat: hsl(40, 81.94%, 59.61%);
+
+  --hue-note-seagreen: hsl(148.28, 93.55%, 71.76%);
+  --hue-note-lila-purple: hsl(268.46, 92.86%, 67.06%);
+  --hue-note-swan-blue: hsl(177.93, 93.55%, 71.76%);
+
+  --hue-snow-grey: hsla(218, 19%, 89%, 1);
+  --hue-snow: hsla(218, 19%, 98%, 1);
+  --hue-winter-grey: hsla(218, 19%, 59%, 1);
+  --halfway-see-through-snow-grey: hsla(218, 19%, 89%, 0.75);
+  --hue-delete-normal: rgb
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--hue-snow-grey);
+}
+
+header {
+  min-height: 10vh;
+  background-color: var(--hue-mn-apricot);
+  color: var(--hue-aft-golden-wheat);
+}
+
+main {
+  flex-grow: 1;
+}
+
+.hue-delete {
+  color: rgb(245, 40, 40);
+  text-shadow: 1px 1px 0px black;
+  cursor: pointer;
+}
+
+.hue-delete-white-shadow {
+  color: rgb(245, 40, 40);
+  text-shadow: 1px 1px 0px yellow;
+  cursor: pointer;
+}
+
+footer {
+  min-height: 10vh;
+  background-color: var(--hue-mn-apricot);
+  color: var(--hue-aft-golden-wheat);
+}
+
+.swan-blue {
+  background-color: var(--hue-note-swan-blue);
+  color: black;
+}
+
+.rosy-pink {
+  background-color: var(--hue-tw-rosy-pink);
+  color: var(--hue-snow)
+}
+
+.lila-purple {
+  background-color: var(--hue-note-lila-purple);
+}
+
+.sea-green {
+  background-color: var(--hue-note-seagreen);
+  color: black;
+}
+
+.border-sea-green {
+  border: 3px solid var(--hue-note-seagreen);
+}
+
+.border-swan-blue {
+  border: 3px solid var(--hue-note-swan-blue);
+}
+.border-lila-purple {
+  border: 3px solid var(--hue-note-lila-purple);
+}
+
+.border-rosy-pink {
+  border: 3px solid var(--hue-note-seagreen);
+}
+
+.no-bottom-border {
+  border-bottom: 0 !important;
+}
+
+/* .form-positioning-class {
+  flex: justif; */
+
+}
+
+
