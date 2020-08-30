@@ -21,15 +21,21 @@ export default class ListController {
   addList() {
     event.preventDefault();
     let listForm = event.target;
-    let newList = {
-      // @ts-ignore
-      name: listForm.name.value,
-      // @ts-ignore
-      color: listForm.color.value,
-    };
-    console.log(newList);
-    debugger;
-    ListService.addList(newList);
+    // @ts-ignore
+    if (listForm.color.value == "Choose colors...") {
+      prompt("Please choose a color");
+    }
+    // @ts-ignore
+    if (listForm.color.value != "Choose colors...") {
+      let newList = {
+        // @ts-ignore
+        name: listForm.name.value,
+        // @ts-ignore
+        color: listForm.color.value,
+      };
+      console.log(newList);
+      ListService.addList(newList);
+    }
     _drawLists();
   }
 
@@ -46,7 +52,6 @@ export default class ListController {
     // @ts-ignore
     let newTask = taskForm.submitTask.value;
     console.log(newTask);
-    debugger;
     ListService.addTask(id, newTask);
     _drawLists();
   }

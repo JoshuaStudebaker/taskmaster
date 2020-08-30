@@ -14,7 +14,7 @@ export default class List {
 
   get Template() {
     return `
-    <div class="col col-md-4 my-2">
+    <div class="col-12 col-md-4 my-2">
           <div class="card p-2 shadow border-${this.color}">
             <div class="card-header ${this.color} shadow mb-1">
               ${this.name}
@@ -35,7 +35,7 @@ export default class List {
                       class="form-control"
                       name="submitTask"
                       id="submitTask"
-                      placeholder="Enter Task..."
+                      placeholder="Enter Task..." required
                     />
                   </div>
                   <div class="text-right form-group col-3">
