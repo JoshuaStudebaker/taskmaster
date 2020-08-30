@@ -26,7 +26,9 @@ export default class ListController {
       color: listForm.color.value,
     };
     console.log(newList);
+    debugger;
     ListService.addList(newList);
+    _drawLists();
   }
 
   removeList(id) {

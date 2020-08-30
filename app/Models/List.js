@@ -14,8 +14,42 @@ export default class List {
 
   get Template() {
     return `
-   <div class="${this.color}" <h1>${this.name}</h1>
-   <div>${this.TasksTemplate}</div>
+    <div class="col col-md-4 my-2">
+          <div class="card p-2 shadow border-${this.color}">
+            <div class="card-header ${this.color} shadow mb-1">
+              ${this.name}
+              <i
+                class="far fa-calendar-minus hue-delete"
+                onclick="removeList('${this.id}')"
+              ></i>
+            </div>
+            <ul class="list-group list-group-flush no-bottom-border tasks">
+              
+            </ul>
+            <div class="card-footer shadow mt-1">
+              <form onsubmit="app.listController.addTask('${this.id}')">
+                <div class="form-row">
+                  <div class="form-group col-9 text-right">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="task"
+                      placeholder="Enter Task..."
+                    />
+                  </div>
+                  <div class="text-right form-group col-3">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-sm ${this.color}"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
     `;
   }
 
@@ -24,7 +58,12 @@ export default class List {
     this.tasks.forEach(
       (t) =>
         (template += `
-        <p>${t}</p>        
+        <li class="list-group-item">
+                <input type="checkbox" />
+                ${t}
+                <i class="fas fa-trash hue-delete" onclick="removeTask('${this.id}','${t}')"></i>
+              </li>
+                   
         `)
     );
     return template;
