@@ -22,7 +22,9 @@ export default class ListController {
     event.preventDefault();
     let listForm = event.target;
     let newList = {
+      // @ts-ignore
       name: listForm.name.value,
+      // @ts-ignore
       color: listForm.color.value,
     };
     console.log(newList);
@@ -39,12 +41,11 @@ export default class ListController {
   addTask(id) {
     event.preventDefault();
     let taskForm = event.target;
-    let newTask = {
-      task: taskForm.task.value,
-    };
+    // @ts-ignore
+    let newTask = taskForm.submitTask.value;
     console.log(newTask);
+    debugger;
     ListService.addTask(id, newTask);
-
     _drawLists();
   }
 

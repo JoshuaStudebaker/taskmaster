@@ -9,8 +9,8 @@ class ListService {
     list.tasks.splice(taskIndex, 1);
   }
   addTask(id, newTask) {
-    let seeker = store.State.tasks.find((list) => list.id == id);
-    seeker.tasks.push(newTask);
+    let found = store.State.tasks.find((n) => n.id == id);
+    found.tasks.push(newTask);
   }
   removeList(id) {
     store.State.lists = store.State.lists.filter((list) => list.id != id);

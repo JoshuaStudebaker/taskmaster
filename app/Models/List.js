@@ -20,7 +20,7 @@ export default class List {
               ${this.name}
               <i
                 class="far fa-calendar-minus hue-delete"
-                onclick="removeList('${this.id}')"
+                onclick="app.listController.removeList('${this.id}')"
               ></i>
             </div>
             <ul class="list-group list-group-flush no-bottom-border tasks">
@@ -33,7 +33,8 @@ export default class List {
                     <input
                       type="text"
                       class="form-control"
-                      id="task"
+                      name="submitTask"
+                      id="submitTask"
                       placeholder="Enter Task..."
                     />
                   </div>
@@ -61,7 +62,7 @@ export default class List {
         <li class="list-group-item">
                 <input type="checkbox" />
                 ${t}
-                <i class="fas fa-trash hue-delete" onclick="removeTask('${this.id}','${t}')"></i>
+                <i class="fas fa-trash hue-delete" onclick="app.listController.removeTask('${this.id}','${t}')"></i>
               </li>
                    
         `)
