@@ -52,7 +52,9 @@ export default class ListController {
   }
 
   removeTask(id, taskName) {
-    ListService.removeTask(id, taskName);
+    if (window.confirm("Do you really want to delete?")) {
+      ListService.removeTask(id, taskName);
+    }
     _drawLists();
   }
 }
