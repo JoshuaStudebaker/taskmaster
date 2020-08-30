@@ -27,9 +27,14 @@
         <form class="d-flex justify-content-end" onsubmit="app.listController.addList()">
           <div class="form-row">
             
-           
+              <div class="form-group">
+                <label for="name">Create a list</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter its name..">
+              </div>
+           </div>
+           <div class="form-row">
             <div class="col-auto my-1">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Create</button>
             </div>
           </div>
         </div>
@@ -38,6 +43,23 @@
       </div>
     </header>
     <main class="container-fluid">
+      <div class="row">
+        <div class="col col-md-4 my-2">
+        <div class="card p-2 shadow border-sea-green">
+          <div class="card-header sea-green shadow mb-1">
+            Featured
+          </div>
+          <ul class="list-group list-group-flush no-border">
+            <li class="list-group-item">Cras justo odio <i class="fas fa-trash hue-delete" onclick="removeTask()"></i></li>
+            <li class="list-group-item">Dapibus ac facilisis in <i class="fas fa-trash hue-delete" onclick="removeTask()"></i></li>
+            <li class="list-group-item">Vestibulum at eros <i class="fas fa-trash hue-delete" onclick="removeTask()"></i></li>
+          </ul>
+          <div class="card-footer shadow mt-1">
+            Card footer
+          </div>
+        </div>
+        </div>
+      </div>
       <div id="list"></div>
     </main>
     <footer class="container-fluid shadow"></footer>

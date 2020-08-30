@@ -4,7 +4,7 @@
   --hue-mn-apricot-lighter: hsl(8.57, 81.82%, 79.8%);
 
   --hue-tw-frolic: hsl(338.74, 81.94%, 69.61%);
-  --hue-tw-frolic-darker: hsl(338.74, 81.94%, 59.61%);
+  --hue-tw-rosy-pink: hsl(338.74, 81.94%, 59.61%);
   --hue-tw-frolic-lighter: hsl(338.74, 81.94%, 79.61%);
 
   --hue-aft-golden-wheat: hsl(40, 81.94%, 59.61%);
@@ -36,6 +36,10 @@ main {
   flex-grow: 1;
 }
 
+.hue-delete {
+  color: rgb(245, 40, 40);
+}
+
 footer {
   min-height: 10vh;
   background-color: var(--hue-mn-apricot);
@@ -43,17 +47,36 @@ footer {
 }
 
 .swan-blue {
-  color: var(--hue-note-swan-blue);
+  background-color: var(--hue-note-swan-blue);
 }
 
-.frolic-pink {
-  color: var(--hue-tw-frolic-darker);
+.rosy-pink {
+  background-color: var(--hue-tw-rosy-pink);
 }
 
 .lila-purple {
-  color: var(--hue-note-lila);
+  background-color: var(--hue-note-lila-purple);
 }
 
 .sea-green {
   background-color: var(--hue-note-seagreen);
+}
+
+.border-sea-green {
+  border: 3px solid var(--hue-note-seagreen);
+}
+
+.border-swan-blue {
+  border: 3px solid var(--hue-note-swan-blue);
+}
+.border-lila-purple {
+  border: 3px solid var(--hue-note-lila-purple);
+}
+
+.border-rosy-pink {
+  border: 3px solid var(--hue-note-seagreen);
+}
+
+.no-border {
+  border-bottom: 0 !important;
 }
