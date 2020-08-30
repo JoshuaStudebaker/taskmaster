@@ -35,7 +35,7 @@ export default class List {
                       class="form-control"
                       name="submitTask"
                       id="submitTask"
-                      placeholder="Enter Task..."
+                      placeholder="Enter Task..." required
                     />
                   </div>
                   <div class="text-right form-group col-3">
