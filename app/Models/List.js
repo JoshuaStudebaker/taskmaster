@@ -24,7 +24,7 @@ export default class List {
               ></i>
             </div>
             <ul class="list-group list-group-flush no-bottom-border tasks">
-              
+              ${this.TasksTemplate}
             </ul>
             <div class="card-footer shadow mt-1">
               <form onsubmit="app.listController.addTask('${this.id}')">
