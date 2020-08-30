@@ -55,7 +55,7 @@ export default class List {
   }
 
   get TasksTemplate() {
-    let template = "";
+    let template = "<li class='list-group-item d-none'>Add a task</li>";
     this.tasks.forEach(
       (t) =>
         (template += `
