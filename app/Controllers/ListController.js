@@ -34,7 +34,9 @@ export default class ListController {
   }
 
   removeList(id) {
-    ListService.removeList(id);
+    if (window.confirm("Do you really want to delete?")) {
+      ListService.removeList(id);
+    }
     _drawLists();
   }
 
