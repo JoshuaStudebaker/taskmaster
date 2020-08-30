@@ -24,11 +24,8 @@
           <h1><i class="fas fa-sticky-note"></i> Task Master</h1>
         </div>
         <div class="col-9">
-          <form
-            class="py-2 justify-content-between"
-            onsubmit="app.listController.addList()"
-          >
-            <div class="form-row">
+          <form class="py-2" onsubmit="app.listController.addList()">
+            <div class="form-row justify-content-end">
               <div class="form-group col-9">
                 <input
                   type="text"
@@ -38,8 +35,14 @@
                 />
               </div>
             </div>
-            <div class="form-row">
+            <div class="form-row justify-content-around form-inline">
               <div class="form-group col-3">
+                <select name="color">
+                  <option selected>Choose colors...</option>
+                  <option value="sea-green" class="sea-green">See Green</option>
+                  <option value="swan-blue" class="swan-blue">Swan Blue</option>
+                </select>
+
                 <button type="submit" class="btn btn-primary">Create</button>
               </div>
             </div>
@@ -51,7 +54,14 @@
       <div class="row">
         <div class="col col-md-4 my-2">
           <div class="card p-2 shadow border-sea-green">
-            <div class="card-header sea-green shadow mb-1">Featured</div>
+            <div class="card-header sea-green shadow mb-1">
+              Featured
+
+              <i
+                class="far fa-calendar-minus hue-delete"
+                onclick="removeList()"
+              ></i>
+            </div>
             <ul class="list-group list-group-flush no-bottom-border">
               <li class="list-group-item">
                 <input type="checkbox" />
@@ -73,11 +83,11 @@
             <div class="card-footer shadow mt-1">
               <form onsubmit="app.listController.addTask()">
                 <div class="form-row">
-                  <div class="form-group col-9">
+                  <div class="form-group col-9 text-right">
                     <input
                       type="text"
                       class="form-control"
-                      id="name"
+                      id="task"
                       placeholder="Enter Task..."
                     />
                   </div>
@@ -97,7 +107,12 @@
       </div>
       <div id="list"></div>
     </main>
-    <footer class="container-fluid shadow">Crafted by StudeWorks</footer>
+    <footer class="container-fluid shadow text-center">
+      <h3>
+        <i class="fas fa-hat-cowboy-side"></i> Crafted by StudeWorks
+        <i class="fas fa-hat-cowboy-side"></i>
+      </h3>
+    </footer>
 
     <!--#region Scripts -->
     <script src="app/main.js" type="module"></script>

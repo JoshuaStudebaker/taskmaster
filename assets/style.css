@@ -38,12 +38,13 @@ main {
 
 .hue-delete {
   color: rgb(245, 40, 40);
+  cursor: pointer;
 }
 
 footer {
   min-height: 10vh;
   background-color: var(--hue-mn-apricot);
-  color: var(--hue-aft-golden-sand);
+  color: var(--hue-aft-golden-wheat);
 }
 
 .swan-blue {
@@ -86,3 +87,5 @@ footer {
   flex: justif; */
 
 }
+
+
