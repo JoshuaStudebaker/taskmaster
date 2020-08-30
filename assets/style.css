@@ -60,6 +60,7 @@ footer {
 
 .sea-green {
   background-color: var(--hue-note-seagreen);
+  color: black;
 }
 
 .border-sea-green {
@@ -77,6 +78,11 @@ footer {
   border: 3px solid var(--hue-note-seagreen);
 }
 
-.no-border {
+.no-bottom-border {
   border-bottom: 0 !important;
+}
+
+/* .form-positioning-class {
+  flex: justif; */
+
 }

@@ -22,47 +22,82 @@
       <div class="row">
         <div class="col-3">
           <h1><i class="fas fa-sticky-note"></i> Task Master</h1>
-        </div>           
-        <div class="col-9">
-        <form class="d-flex justify-content-end" onsubmit="app.listController.addList()">
-          <div class="form-row">
-            
-              <div class="form-group">
-                <label for="name">Create a list</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter its name..">
-              </div>
-           </div>
-           <div class="form-row">
-            <div class="col-auto my-1">
-              <button type="submit" class="btn btn-primary">Create</button>
-            </div>
-          </div>
         </div>
-      </div>
-        </form>
+        <div class="col-9">
+          <form
+            class="py-2 justify-content-between"
+            onsubmit="app.listController.addList()"
+          >
+            <div class="form-row">
+              <div class="form-group col-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter List Name.."
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-3">
+                <button type="submit" class="btn btn-primary">Create</button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </header>
     <main class="container-fluid">
       <div class="row">
         <div class="col col-md-4 my-2">
-        <div class="card p-2 shadow border-sea-green">
-          <div class="card-header sea-green shadow mb-1">
-            Featured
+          <div class="card p-2 shadow border-sea-green">
+            <div class="card-header sea-green shadow mb-1">Featured</div>
+            <ul class="list-group list-group-flush no-bottom-border">
+              <li class="list-group-item">
+                <input type="checkbox" />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                quos porro quidem atque, debitis possimus.
+                <i class="fas fa-trash hue-delete" onclick="removeTask()"></i>
+              </li>
+              <li class="list-group-item">
+                <input type="checkbox" />
+                Dapibus ac facilisis in
+                <i class="fas fa-trash hue-delete" onclick="removeTask()"></i>
+              </li>
+              <li class="list-group-item">
+                <input type="checkbox" />
+                Vestibulum at eros
+                <i class="fas fa-trash hue-delete" onclick="removeTask()"></i>
+              </li>
+            </ul>
+            <div class="card-footer shadow mt-1">
+              <form onsubmit="app.listController.addTask()">
+                <div class="form-row">
+                  <div class="form-group col-9">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Enter Task..."
+                    />
+                  </div>
+                  <div class="text-right form-group col-3">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-sm sea-green"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-          <ul class="list-group list-group-flush no-border">
-            <li class="list-group-item">Cras justo odio <i class="fas fa-trash hue-delete" onclick="removeTask()"></i></li>
-            <li class="list-group-item">Dapibus ac facilisis in <i class="fas fa-trash hue-delete" onclick="removeTask()"></i></li>
-            <li class="list-group-item">Vestibulum at eros <i class="fas fa-trash hue-delete" onclick="removeTask()"></i></li>
-          </ul>
-          <div class="card-footer shadow mt-1">
-            Card footer
-          </div>
-        </div>
         </div>
       </div>
       <div id="list"></div>
     </main>
-    <footer class="container-fluid shadow"></footer>
+    <footer class="container-fluid shadow">Crafted by StudeWorks</footer>
 
     <!--#region Scripts -->
     <script src="app/main.js" type="module"></script>
@@ -88,9 +123,6 @@
     <!--#endregion -->
   </body>
 </html>
-
-
-
 
 <!--  
   <div class="dropdown">
