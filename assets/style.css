@@ -17,7 +17,6 @@
   --hue-snow: hsla(218, 19%, 98%, 1);
   --hue-winter-grey: hsla(218, 19%, 59%, 1);
   --halfway-see-through-snow-grey: hsla(218, 19%, 89%, 0.75);
-  --hue-delete-normal: rgb
 }
 
 body {
@@ -38,14 +37,8 @@ main {
 }
 
 .hue-delete {
-  color: rgb(245, 40, 40);
+  color: orange;
   text-shadow: 1px 1px 0px black;
-  cursor: pointer;
-}
-
-.hue-delete-white-shadow {
-  color: rgb(245, 40, 40);
-  text-shadow: 1px 1px 0px yellow;
   cursor: pointer;
 }
 
@@ -62,7 +55,7 @@ footer {
 
 .rosy-pink {
   background-color: var(--hue-tw-rosy-pink);
-  color: var(--hue-snow)
+  color: var(--hue-snow);
 }
 
 .lila-purple {
@@ -92,10 +85,3 @@ footer {
 .no-bottom-border {
   border-bottom: 0 !important;
 }
-
-/* .form-positioning-class {
-  flex: justif; */
-
-}
-
-

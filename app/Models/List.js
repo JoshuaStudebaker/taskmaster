@@ -19,7 +19,7 @@ export default class List {
             <div class="card-header ${this.color} shadow mb-1">
               ${this.name}
               <i
-                class="far fa-calendar-minus hue-delete"
+                class="fas fa-dumpster-fire hue-delete"
                 onclick="app.listController.removeList('${this.id}')"
               ></i>
             </div>
