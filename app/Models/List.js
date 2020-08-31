@@ -41,7 +41,7 @@ export default class List {
                   <div class="text-right form-group col-3">
                     <button
                       type="submit"
-                      class="btn btn-primary btn-sm ${this.color}"
+                      class="btn btn-primary btn-sm ${this.color} border-${this.color}-darker"
                     >
                       Add
                     </button>
