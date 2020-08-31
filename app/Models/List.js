@@ -19,7 +19,7 @@ export default class List {
             <div class="card-header ${this.color} shadow mb-1">
               ${this.name}
               <i
-                class="far fa-calendar-minus hue-delete"
+                class="fas fa-dumpster-fire hue-delete"
                 onclick="app.listController.removeList('${this.id}')"
               ></i>
             </div>
@@ -41,7 +41,7 @@ export default class List {
                   <div class="text-right form-group col-3">
                     <button
                       type="submit"
-                      class="btn btn-primary btn-sm ${this.color}"
+                      class="btn btn-primary btn-sm ${this.color} border-${this.color}-darker"
                     >
                       Add
                     </button>

@@ -4,20 +4,26 @@
   --hue-mn-apricot-lighter: hsl(8.57, 81.82%, 79.8%);
 
   --hue-tw-frolic: hsl(338.74, 81.94%, 69.61%);
-  --hue-tw-rosy-pink: hsl(338.74, 81.94%, 59.61%);
+  --hue-note-rosy-pink: hsl(338.74, 81.94%, 59.61%);
   --hue-tw-frolic-lighter: hsl(338.74, 81.94%, 79.61%);
 
   --hue-aft-golden-wheat: hsl(40, 81.94%, 59.61%);
+  --hue-aft-golden-wheat-darker: hsl(40, 81.94%, 49.61%);
+  --hue-aft-golden-wheat-lighter: hsl(40, 81.94%, 79.61%);
 
   --hue-note-seagreen: hsl(148.28, 93.55%, 71.76%);
   --hue-note-lila-purple: hsl(268.46, 92.86%, 67.06%);
   --hue-note-swan-blue: hsl(177.93, 93.55%, 71.76%);
 
+  --hue-note-seagreen-darker: hsl(148.28, 93.55%, 51.76%);
+  --hue-note-lila-purple-darker: hsl(268.46, 92.86%, 47.06%);
+  --hue-note-swan-blue-darker: hsl(177.93, 93.55%, 51.76%);
+  --hue-note-rosy-pink-darker: hsl(338.74, 81.94%, 39.61%);
+
   --hue-snow-grey: hsla(218, 19%, 89%, 1);
   --hue-snow: hsla(218, 19%, 98%, 1);
   --hue-winter-grey: hsla(218, 19%, 59%, 1);
   --halfway-see-through-snow-grey: hsla(218, 19%, 89%, 0.75);
-  --hue-delete-normal: rgb
 }
 
 body {
@@ -38,14 +44,8 @@ main {
 }
 
 .hue-delete {
-  color: rgb(245, 40, 40);
+  color: orange;
   text-shadow: 1px 1px 0px black;
-  cursor: pointer;
-}
-
-.hue-delete-white-shadow {
-  color: rgb(245, 40, 40);
-  text-shadow: 1px 1px 0px yellow;
   cursor: pointer;
 }
 
@@ -61,12 +61,13 @@ footer {
 }
 
 .rosy-pink {
-  background-color: var(--hue-tw-rosy-pink);
-  color: var(--hue-snow)
+  background-color: var(--hue-note-rosy-pink);
+  color: var(--hue-snow);
 }
 
 .lila-purple {
   background-color: var(--hue-note-lila-purple);
+  color: var(--hue-snow);
 }
 
 .sea-green {
@@ -86,16 +87,30 @@ footer {
 }
 
 .border-rosy-pink {
-  border: 3px solid var(--hue-note-seagreen);
+  border: 3px solid var(--hue-note-rosy-pink);
+}
+
+.border-sea-green-darker {
+  border: 1px solid green;
+}
+
+.border-swan-blue-darker {
+  border: 1px solid blue;
+}
+.border-lila-purple-darker {
+  border: 1px solid indigo;
+}
+
+.border-rosy-pink-darker {
+  border: 1px solid var(--hue-note-rosy-pink-darker);
 }
 
 .no-bottom-border {
   border-bottom: 0 !important;
 }
 
-/* .form-positioning-class {
-  flex: justif; */
-
+.create-button {
+  background-color: var(--hue-aft-golden-wheat-lighter);
+  border: 2px solid var(--hue-aft-golden-wheat-darker);
+  color: var(--hue-mn-apricot-darker);
 }
-
-

@@ -20,10 +20,10 @@
   <body>
     <header class="container-fluid shadow text-center">
       <div class="row">
-        <div class="col-3">
+        <div class="col-md-4 mt-2">
           <h1><i class="fas fa-sticky-note"></i> Task Master</h1>
         </div>
-        <div class="col-9">
+        <div class="col-md-8 mt-2">
           <form class="py-2" onsubmit="app.listController.addList()">
             <div class="form-row justify-content-end">
               <div class="form-group col-9">
@@ -40,7 +40,7 @@
               <div class="form-group form-inline col-9 justify-content-between">
                 <select name="color" id="color" required class="my-1">
                   <option selected>Choose colors...</option>
-                  <option value="sea-green" class="sea-green">See Green</option>
+                  <option value="sea-green" class="sea-green">Sea Green</option>
                   <option value="swan-blue" class="swan-blue">Swan Blue</option>
                   <option value="lila-purple" class="lila-purple">
                     Lila Purple
@@ -48,7 +48,10 @@
                   <option value="rosy-pink" class="rosy-pink">Rosy Pink</option>
                 </select>
 
-                <button type="submit" class="btn btn-primary my-1">
+                <button
+                  type="submit"
+                  class="btn btn-primary my-1 create-button"
+                >
                   Create
                 </button>
               </div>
@@ -61,10 +64,10 @@
       <div class="row" id="list"></div>
     </main>
     <footer class="container-fluid shadow text-center">
-      <h3>
+      <h4 class="mt-3">
         <i class="fas fa-hat-cowboy-side"></i> Crafted by StudeWorks
         <i class="fas fa-hat-cowboy-side"></i>
-      </h3>
+      </h4>
     </footer>
 
     <!--#region Scripts -->
